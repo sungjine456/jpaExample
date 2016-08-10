@@ -1,6 +1,7 @@
 package com.jpa.example.domain;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -18,9 +19,8 @@ public class Delivery {
 	private Long id;
 	@OneToOne(mappedBy = "delivery")
 	private Order order;
-	private String city;
-	private String street;
-	private String zipcode;
+	@Embedded
+	private Address address;
 	@Enumerated(EnumType.STRING)
 	private DeliveryStatus status;
 	
@@ -36,23 +36,11 @@ public class Delivery {
 	public void setOrder(Order order) {
 		this.order = order;
 	}
-	public String getCity() {
-		return city;
+	public Address getAddress() {
+		return address;
 	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getStreet() {
-		return street;
-	}
-	public void setStreet(String street) {
-		this.street = street;
-	}
-	public String getZipcode() {
-		return zipcode;
-	}
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 	public DeliveryStatus getStatus() {
 		return status;
