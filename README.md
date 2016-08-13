@@ -14,8 +14,6 @@ back end
 	1. java 8
 	2. Spring Boot
 	3. Spring Data JPA(ORM)
-	4. H2
-	5. SLF4J(Logger)
 ```
 ```
 build tool
