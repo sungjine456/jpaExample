@@ -23,7 +23,7 @@ public class Item {
 	private String name;
 	private int price;
 	private int stockQuantity;
-	@ManyToMany(mappedBy = "item")
+	@ManyToMany(mappedBy = "items")
 	private List<Category> categories = new ArrayList<Category>();
 	
 	public Long getId() {

@@ -25,7 +25,7 @@ public class Category {
 			joinColumns = @JoinColumn(name = "CATEGORY_ID"),
 			inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
 	private List<Item> items = new ArrayList<Item>();
-	// Ä«Å×°í¸®ÀÇ °èÃş ±¸Á¶¸¦ À§ÇÑ ÇÊµåµé
+	// ì¹´í…Œê³ ë¦¬ì˜ ê³„ì¸µ êµ¬ì¡°ë¥¼ ìœ„í•œ í•„ë“œë“¤
 	@ManyToOne
 	@JoinColumn(name = "PARENT_ID")
 	private Category parent;
